@@ -1,8 +1,7 @@
 #install.packages("tidyverse")
-library("tidyverse")
+library("tidyverse") # conjunto de libs, tipo anaconda
 
 dados <- read_csv2("https://raw.githubusercontent.com/tiagomendonca/educacao/main/estado.csv")
-
 
 head(dados)
 
@@ -18,4 +17,9 @@ dados %>%
 dados %>% 
   ggplot(aes(x = ano, y = nota_matematica, group = estado, color = regiao)) + 
   geom_point() + geom_line()
+
+head(mtcars)
+?mtcars
+
+summary(mtcars)
 
