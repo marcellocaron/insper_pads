@@ -37,9 +37,10 @@ n_distinct(cinema_df$Genero) # 4
 
 cinema_df %>% 
   group_by(Genero) %>% 
-    summarise(mean(Avaliacao))
+    summarise(mean_avaliacao = mean(Avaliacao), std_avaliacao = replace_na(sd(Avaliacao),0)) %>% 
+      arrange(desc(mean_avaliacao))
 
-# 1 Animação                       7.5 
-# 2 Ação                           7.3 
-# 3 Fantasia                       9   
-# 4 Ficção Científica              8.65
+# 1 Fantasia                    9   
+# 2 Ficção Científica           8.65
+# 3 Animação                    7.5 
+# 4 Ação                        7.3 
