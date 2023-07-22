@@ -18,3 +18,4 @@ dados %>%
 dados %>% 
   ggplot(aes(x = ano, y = nota_matematica, group = estado, color = regiao)) + 
   geom_point() + geom_line()
+
